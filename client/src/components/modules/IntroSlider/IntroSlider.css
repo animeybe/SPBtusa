@@ -1,0 +1,42 @@
+.intro-slider {
+    overflow: hidden;
+}
+.intro-banner {
+    width: 300%;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+.intro-banner__img {
+    width: calc(100% / 3);
+    height: 638px;
+    cursor: pointer;
+    object-fit:cover;
+}
+.intro-slider-arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+}
+.intro-slider__arrow {
+    cursor: pointer;
+    opacity: .6;
+    color: #EFEFEF;
+    font-size: 41px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.intro-slider__arrow:hover {
+    opacity: 1;
+    color: white;
+}
+.intro-slider__arrow_left {
+}
+.intro-slider__arrow_right {
+}

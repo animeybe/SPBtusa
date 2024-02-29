@@ -1,0 +1,28 @@
+.product-section {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+}
+.product-section__button {
+    text-align: center;
+    width: 100%;
+    height: 85px;
+    /* border: 1px solid #000; */
+    color: #000;
+    margin-top: -40px;
+    margin-bottom: 90px;
+}
+.product-section__button button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--ff-general);
+    white-space: nowrap;
+    cursor: pointer;
+}

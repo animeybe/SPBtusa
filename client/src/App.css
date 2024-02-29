@@ -1,0 +1,8 @@
+:root {
+  --ff-general: 'TildaSans',Arial,sans-serif;
+}
+
+body {
+  background-color: #EFEFEF;
+  padding-top: 80px;
+}

@@ -1,0 +1,10 @@
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: var(--ff-general);
+}
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
