@@ -1,4 +1,6 @@
 .product-section__card {
+    position: relative;
+
     width: 360px;
     max-height: 591px;
     font-family: var(--ff-general);
@@ -10,6 +12,29 @@
 }
 .product-section__card_preorder {
     margin-bottom: 90px;
+}
+.product-card__preorder-mark-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+    display: table;
+    border-radius: 50px;
+
+    color: #ffffff;
+    background-color: #ff4a4a;
+}
+.product-card__preorder-mark {
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Roboto',Arial,sans-serif;
+    display: table-cell;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 .product-card__image {
     background-position: center;

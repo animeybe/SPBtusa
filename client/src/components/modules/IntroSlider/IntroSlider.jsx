@@ -1,46 +1,51 @@
+import { useEffect, useState } from "react";
 import Yulius from "../../../assets/img/pages/HomePage/intro-banner/1.jpg";
 import Kuzma from "../../../assets/img/pages/HomePage/intro-banner/2.jpg";
 import Anton from "../../../assets/img/pages/HomePage/intro-banner/3.jpg";
 import "./IntroSlider.css";
 
-let currentIntroImgIndex = 0;
-
 export default function IntroSlider() {
+  const [currentIntroImgIndex, setCurrentIntroImgIndex] = useState(0);
+
   function toggleIntroImgRight(currentIntroImgIndex) {
     const IntroBannerBlock = document.querySelector(".intro-banner");
 
     if (IntroBannerBlock) {
       if (currentIntroImgIndex === 0) {
         IntroBannerBlock.style.marginLeft = "-100%";
-        currentIntroImgIndex = 1;
+        setCurrentIntroImgIndex(1)
       } else if (currentIntroImgIndex === 1) {
         IntroBannerBlock.style.marginLeft = "-200%";
-        currentIntroImgIndex = 2;
+        setCurrentIntroImgIndex(2)
       } else {
         IntroBannerBlock.style.marginLeft = "0%";
-        currentIntroImgIndex = 0;
+        setCurrentIntroImgIndex(0)
       }
     }
-    return currentIntroImgIndex;
   }
   function toggleIntroImgLeft(currentIntroImgIndex) {
     const IntroBannerBlock = document.querySelector(".intro-banner");
 
     if (currentIntroImgIndex === 0) {
       IntroBannerBlock.style.marginLeft = "-200%";
-      currentIntroImgIndex = 2;
+      setCurrentIntroImgIndex(2);
     } else if (currentIntroImgIndex === 1) {
       IntroBannerBlock.style.marginLeft = "0%";
-      currentIntroImgIndex = 0;
+      setCurrentIntroImgIndex(0);
     } else {
       IntroBannerBlock.style.marginLeft = "-100%";
-      currentIntroImgIndex = 1;
+      setCurrentIntroImgIndex(1);
     }
-    return currentIntroImgIndex;
   }
-  setInterval(() => {
-    currentIntroImgIndex = toggleIntroImgRight(currentIntroImgIndex);
-  }, 5000);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      toggleIntroImgRight(currentIntroImgIndex);
+    }, 5000);
+    
+    // очистка интервала
+    return () => clearInterval(timer);
+  });
 
   return (
     <section className="intro-slider">
@@ -53,7 +58,7 @@ export default function IntroSlider() {
         <span
           className="intro-slider__arrow intro-slider__arrow_left"
           onClick={() => {
-            currentIntroImgIndex = toggleIntroImgLeft(currentIntroImgIndex);
+            toggleIntroImgLeft(currentIntroImgIndex);
           }}
         >
           &lt;
@@ -61,7 +66,7 @@ export default function IntroSlider() {
         <span
           className="intro-slider__arrow intro-slider__arrow_right"
           onClick={() => {
-            currentIntroImgIndex = toggleIntroImgRight(currentIntroImgIndex);
+            toggleIntroImgRight(currentIntroImgIndex);
           }}
         >
           &gt;

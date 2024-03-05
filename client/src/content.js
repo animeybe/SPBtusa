@@ -6,6 +6,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3765-3238-4439-b661-653530616561/88346667.jpg",
     productType: "passportCover",
     price: "500",
+    createdDate: new Date(2023, 0, 8),
     preOrder: false,
   },
   {
@@ -15,6 +16,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3764-6139-4232-a664-656665623435/97673288.jpg",
     productType: "tShirt",
     price: "3 199",
+    createdDate: new Date(2023, 0, 8),
     preOrder: false,
   },
   {
@@ -24,6 +26,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3831-3137-4332-a334-396364346133/85805638.jpg",
     productType: "tShirt",
     price: "3 000",
+    createdDate: new Date(2023, 0, 7),
     preOrder: true,
     preOrderText: "Предзаказ. Срок доставки: конец марта",
   },
@@ -34,6 +37,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6565-3439-4630-a663-326436336463/43742901.jpg",
     productType: "tShirt",
     price: "3 000",
+    createdDate: new Date(2023, 0, 7),
     preOrder: true,
     preOrderText: "Предзаказ. Срок доставки: конец марта",
   },
@@ -44,6 +48,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3636-3330-4332-b163-343339323766/78266658.jpg",
     productType: "tShirt",
     price: "2 800",
+    createdDate: new Date(2023, 0, 3),
     preOrder: false,
   },
   {
@@ -53,6 +58,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3030-6337-4630-b034-316563623536/20966368.jpg",
     productType: "tShirt",
     price: "2 700",
+    createdDate: new Date(2023, 0, 4),
     preOrder: false,
   },
   {
@@ -62,6 +68,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6266-6265-4666-b763-316636316632/28864082.jpg",
     productType: "tShirt",
     price: "1 500",
+    createdDate: new Date(2023, 0, 6),
     preOrder: false,
   },
   {
@@ -71,6 +78,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6236-6338-4134-b363-356232326333/93121395.jpg",
     productType: "tShirt",
     price: "2 700",
+    createdDate: new Date(2023, 0, 2),
     preOrder: false,
   },
   {
@@ -80,6 +88,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3362-6261-4238-b962-663838653934/93552373.jpg",
     productType: "hoodies",
     price: "5 000",
+    createdDate: new Date(2023, 0, 5),
     preOrder: false,
   },
   {
@@ -89,6 +98,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6432-3135-4634-b266-316464663863/52976761.jpg",
     productType: "hoodies",
     price: "5 000",
+    createdDate: new Date(2023, 0, 2),
     preOrder: false,
   },
   {
@@ -98,6 +108,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3538-6533-4362-a533-663566336231/95969270.jpg",
     productType: "tShirt",
     price: "2 700",
+    createdDate: new Date(2023, 0, 5),
     preOrder: false,
   },
   {
@@ -107,6 +118,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3134-3362-4339-a336-363961613066/84022026.jpg",
     productType: "tShirt",
     price: "2 700",
+    createdDate: new Date(2023, 0, 1),
     preOrder: false,
   },
   {
@@ -116,6 +128,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6565-3537-4231-b164-353865326434/36111240.jpg",
     productType: "hoodies",
     price: "5 000",
+    createdDate: new Date(2023, 0, 1),
     preOrder: false,
   },
   {
@@ -125,6 +138,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6636-3636-4238-a235-666133643432/22179724.jpg",
     productType: "cards",
     price: "3 000",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -134,6 +148,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6166-3861-4233-a533-326165343532/12474426.jpg",
     productType: "scentedСandles",
     price: "1 600",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -143,6 +158,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3532-6630-4563-b761-613066623835/16254099.jpg",
     productType: "scentedСandles",
     price: "2 100",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -152,6 +168,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3836-3336-4561-b034-616338333762/20257265.jpg",
     productType: "scentedСandles",
     price: "2 100",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -161,6 +178,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3836-3336-4561-b034-616338333762/20257265.jpg",
     productType: "scentedСandles",
     price: "2 100",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -170,6 +188,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3331-3162-4465-b733-613463623432/27463036.jpg",
     productType: "scentedСandles",
     price: "2 100",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -179,6 +198,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3832-3637-4266-b161-313035623330/66882848.jpg",
     productType: "scentedСandles",
     price: "1 600",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -188,6 +208,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6430-3635-4164-a430-643536666538/59272631.jpg",
     productType: "scentedСandles",
     price: "1 600",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -197,6 +218,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3836-3330-4335-b435-346665333063/99023197.jpg",
     productType: "scentedСandles",
     price: "2 100",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -206,6 +228,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3738-3534-4832-b361-393033616462/93592833.jpg",
     productType: "scentedСandles",
     price: "2 100",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -215,6 +238,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3366-3636-4139-b763-306130663638/97815759.jpg",
     productType: "other",
     price: "600",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -224,6 +248,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3861-6332-4430-b264-653430646533/71963667.jpg",
     productType: "stickers",
     price: "290",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -233,6 +258,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3330-3930-4531-b035-393331363131/32014681.jpg",
     productType: "stickers",
     price: "180",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -242,6 +268,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3961-3437-4962-a235-623937393133/93341164.jpg",
     productType: "stickers",
     price: "180",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -251,6 +278,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3230-6233-4534-a233-376162393263/24738956.png",
     productType: "poster",
     price: "500",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -260,6 +288,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6439-3333-4932-a362-343134616430/28044042.png",
     productType: "poster",
     price: "500",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -269,6 +298,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3337-6630-4338-a635-333731643266/48741280.jpg",
     productType: "poster",
     price: "410",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -278,6 +308,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3762-3930-4565-b435-623766343833/55091389.jpg",
     productType: "tatooPack",
     price: "300",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -287,6 +318,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6464-3961-4663-b532-356230336334/55628961.jpg",
     productType: "tatooPack",
     price: "300",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -296,6 +328,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3266-3332-4331-b161-663435323936/44902589.jpg",
     productType: "tatooPack",
     price: "300",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -305,6 +338,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6136-6534-4661-b462-323934333238/19347043.jpg",
     productType: "tatooPack",
     price: "300",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -314,6 +348,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6637-6533-4638-a166-663162316666/99868057.jpg",
     productType: "tatooPack",
     price: "300",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -323,6 +358,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor3634-3266-4636-a539-306536663062/97103760.jpg",
     productType: "tatooPack",
     price: "300",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -332,6 +368,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6135-3030-4238-b931-396262316439/48416375.jpg",
     productType: "shopper",
     price: "1 750",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
   {
@@ -341,6 +378,7 @@ const productList = [
     secondImage: "https://static.tildacdn.com/stor6263-6662-4132-a238-346335313566/38006514.jpg",
     productType: "shopper",
     price: "1 750",
+    createdDate: new Date(2023, 0, 9),
     preOrder: false,
   },
 ];

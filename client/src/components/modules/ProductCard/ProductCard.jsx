@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./ProductCard.css";
 
 export default function ProductCard(props) {
@@ -6,9 +7,14 @@ export default function ProductCard(props) {
       <article
         key={props.id}
         className={`product-section__card ${
-          props.preOrder && "product-section__card_preorder"
+          props.preOrder ? "product-section__card_preorder" : ""
         }`}
       >
+        {props.preOrder && (
+          <div className="product-card__preorder-mark-wrapper">
+            <div className="product-card__preorder-mark">Предзаказ</div>
+          </div>
+        )}
         <div
           href="#"
           className="product-card__image"
