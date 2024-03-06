@@ -1,0 +1,20 @@
+.empty-products-block {
+    width: 100%;
+    max-width: 1160px;
+    margin: 15px 20px 135px;
+    padding: 40px 40px 50px;
+    box-sizing: border-box;
+    min-height: 40vh;
+    border: 1px solid rgba(130,130,130,.5);
+    text-align: center;
+    color: rgba(130,130,130,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    line-height: 1.55;
+
+    font-family: var(--ff-general);
+    font-weight: 300;
+}

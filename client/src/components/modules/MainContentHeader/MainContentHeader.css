@@ -15,14 +15,14 @@
 
     margin-top: 15px;
 }
-.main-content-header__brend-wrapper {
+.main-content-header__brand-wrapper {
     position: relative;
     display: inline-block;
     vertical-align: middle;
     margin-right: 20px;
     margin-bottom: 4px;
 }
-.main-content-header__brend {
+.main-content-header__brand {
     position: relative;
     padding-right: 14px;
     cursor: pointer;
@@ -33,10 +33,10 @@
     overflow: hidden;
     font-weight: 300;
 }
-.main-content-header__brend:hover {
+.main-content-header__brand:hover {
     opacity: .5;
 }
-.main-content-header__brend::after {
+.main-content-header__brand::after {
     content: ' ';
     width: 6px;
     height: 6px;
@@ -51,7 +51,7 @@
     margin: auto;
     pointer-events: none;
 }
-.main-content-header__brend-choosing-field {
+.main-content-header__brand-choosing-field {
     display: none;
 
     position: absolute;
@@ -76,13 +76,13 @@
     font-weight: 300;
     color: #000000;
 }
-.main-content-header__brend-item {
+.main-content-header__brand-item {
     line-height: 1.2;
     cursor: pointer;
     padding: 5px 10px;
     text-align: left;
 }
-.main-content-header__brend-item:hover {
+.main-content-header__brand-item:hover {
     background-color: #eee;
 }
 .main-content-header_left {

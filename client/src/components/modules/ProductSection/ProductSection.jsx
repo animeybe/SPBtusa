@@ -1,20 +1,63 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import ProductCard from "../../modules/ProductCard/ProductCard.jsx";
+import EmptyProductsBlock from "../EmptyProductsBlock/EmptyProductsBlock.jsx";
 import productList from "../../../content.js";
 import "./ProductSection.css";
 
 const initialCountProducts = 12;
 const productsPerСlick = 12;
 
-// eslint-disable-next-line react/prop-types
-export default function ProductSection({ currentSortingType = "default:asc" }) {
-  const [limitedProductList, setProductsToShow] = useState([]);
+export default function ProductSection({
+  currentSortingType = "default:asc",
+  brandName = "default",
+  setBrandName,
+  setSearchByName,
+  searchByName = "default",
+}) {
+  const [limitedProductList, setProductsToShow] = useState(productList);
   const [next, setNext] = useState(initialCountProducts);
 
   useEffect(() => {
-    const sorted = productList.sort(SORTING[currentSortingType].sortingFn);
+    // SORT
+    let sorted;
+    if (brandName === "default" && searchByName === "default") {
+      sorted = productList.sort(SORTING[currentSortingType].sortingFn);
+    } else {
+      console.log(limitedProductList);
+      sorted = limitedProductList.sort(SORTING[currentSortingType].sortingFn);
+    }
     setProductsToShow(sorted.slice(0, initialCountProducts));
   }, [currentSortingType]);
+
+  useEffect(() => {
+    // CHOOSE BRAND
+    if (brandName === "default") return;
+    const handpicked = productList.filter((value) => {
+      return value.brandName === brandName;
+    });
+    const sorted = handpicked.sort(SORTING[currentSortingType].sortingFn);
+    setProductsToShow(sorted.slice(0, initialCountProducts));
+  }, [brandName]);
+
+  useEffect(() => {
+    // SEARCH
+    let handpicked;
+    if (searchByName === "default") {
+      handpicked = productList;
+      setBrandName("default");
+    } else {
+      handpicked = productList.filter((value) => {
+        return (
+          value.name.includes(searchByName) ||
+          value.brandName.includes(searchByName)
+        );
+      });
+      setBrandName("default");
+    }
+    const sorted = handpicked.sort(SORTING[currentSortingType].sortingFn);
+    setProductsToShow(sorted.slice(0, initialCountProducts));
+  }, [searchByName]);
 
   const loopWithSlice = (start, end) => {
     const slicedProduct = productList.slice(start, end);
@@ -28,16 +71,45 @@ export default function ProductSection({ currentSortingType = "default:asc" }) {
 
   return (
     <>
-      <section className="product-section">
-        {limitedProductList.map((item, index) => (
-          <ProductCard key={index} {...item} />
-        ))}
-      </section>
-      {limitedProductList.length < productList.length && (
-        <div className="product-section__button">
-          <button onClick={handleShowMoreProducts}>Загрузить ещё</button>
+      {(brandName !== "default" || searchByName !== "default") && (
+        <div
+          onClick={() => {
+            const sorted = productList.sort(
+              SORTING[currentSortingType].sortingFn
+            );
+            setProductsToShow(sorted.slice(0, initialCountProducts));
+            setSearchByName("default")
+            setBrandName("default");
+          }}
+          className="product-section__brand-name-wrapper"
+        >
+          <div className="product-section__brand-name">
+            {brandName === "default" ? searchByName : brandName}
+          </div>
         </div>
       )}
+      {(brandName !== "default" || searchByName !== "default") && (
+        <div className="product-section__count-of-found">
+          Найдено: {limitedProductList.length}
+        </div>
+      )}
+      <section className="product-section">
+        {limitedProductList.length === 0 ? (
+          <EmptyProductsBlock />
+        ) : (
+          limitedProductList.map((item, index) => (
+            <ProductCard key={index} {...item} />
+          ))
+        )}
+      </section>
+      {limitedProductList.length < productList.length &&
+        limitedProductList.length !== 0 &&
+        brandName === "default" &&
+        searchByName === "default" && (
+          <div className="product-section__button">
+            <button onClick={handleShowMoreProducts}>Загрузить ещё</button>
+          </div>
+        )}
     </>
   );
 }

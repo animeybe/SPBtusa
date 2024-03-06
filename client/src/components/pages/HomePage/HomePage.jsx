@@ -6,15 +6,27 @@ import "./HomePage.css";
 
 export default function HomePage() {
   const [currentSortingType, setCurrentSortingType] = useState();
+  const [brandName, setBrandName] = useState();
+  const [searchByName, setSearchByName] = useState();
 
   return (
     <>
       <IntroSlider />
 
       <main className="main-content">
-        <MainContentHeader setCurrentSortingType={setCurrentSortingType} />
+        <MainContentHeader
+          setCurrentSortingType={setCurrentSortingType}
+          setBrandName={setBrandName}
+          setSearchByName={setSearchByName}
+        />
 
-        <ProductSection currentSortingType={currentSortingType} />
+        <ProductSection
+          currentSortingType={currentSortingType}
+          brandName={brandName}
+          setBrandName={setBrandName}
+          setSearchByName={setSearchByName}
+          searchByName={searchByName}
+        />
       </main>
     </>
   );

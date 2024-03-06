@@ -1,22 +1,51 @@
+/* eslint-disable react/prop-types */
 import SearchIconSvg from "../../../assets/search.svg";
 import "./MainContentHeader.css";
 
-// eslint-disable-next-line react/prop-types
-export default function MainContentHeader({ setCurrentSortingType }) {
+export default function MainContentHeader({
+  setCurrentSortingType,
+  setBrandName,
+  setSearchByName,
+}) {
   const bodyBlock = document.querySelector("body");
   bodyBlock.addEventListener("click", (event) => {
-    const brendChoosingFieldBlock = document.querySelector(
-      ".main-content-header__brend-choosing-field"
+    const brandChoosingFieldBlock = document.querySelector(
+      ".main-content-header__brand-choosing-field"
     );
     if (
       !(
-        event.target ===
-        brendChoosingFieldBlock.parentElement.querySelector(
-          ".main-content-header__brend"
+        // IF is NOT BRAND
+        (
+          event.target ===
+          brandChoosingFieldBlock.parentElement.querySelector(
+            ".main-content-header__brand"
+          )
         )
       )
     ) {
-      brendChoosingFieldBlock.classList.remove("show");
+      brandChoosingFieldBlock.classList.remove("show");
+      if (
+        // IF is SEARCH BUTTON
+        event.target.classList.contains("main-content-header__search-btn") ||
+        event.target.parentElement.classList.contains(
+          "main-content-header__search-btn"
+        )
+      ) {
+        // SET SEARCH BY NAME
+        const input = document.querySelector(
+          ".main-content-header__search-input"
+        );
+        if (input.value) {
+          setSearchByName(input.value);
+        } else {
+          setSearchByName("default");
+        }
+      } else if (
+        // SET BRAND
+        event.target.classList.contains("main-content-header__brand-item")
+      ) {
+        setBrandName(event.target.getAttribute("value"));
+      }
     }
   });
 
@@ -26,36 +55,76 @@ export default function MainContentHeader({ setCurrentSortingType }) {
       <div className="main-content-header-sorting">
         <div
           onClick={() => {
-            const brendChoosingField = document.querySelector(
-              ".main-content-header__brend-choosing-field"
+            const brandChoosingField = document.querySelector(
+              ".main-content-header__brand-choosing-field"
             );
-            brendChoosingField.classList.toggle("show");
+            brandChoosingField.classList.toggle("show");
           }}
-          className="main-content-header_right main-content-header__brend-wrapper"
+          className="main-content-header_right main-content-header__brand-wrapper"
         >
-          <div className="main-content-header__brend noselect">Бренд</div>
-          <div className="main-content-header__brend-choosing-field">
-            <div className="brend-choosing-field__container">
-              <div className="main-content-header__brend-item">
+          <div className="main-content-header__brand noselect">Бренд</div>
+          <div className="main-content-header__brand-choosing-field">
+            <div className="brand-choosing-field__container">
+              <div
+                className="main-content-header__brand-item"
+                value="Hobby Horse Squad"
+              >
                 Hobby Horse Squad
               </div>
-              <div className="main-content-header__brend-item">Kauzlav</div>
-              <div className="main-content-header__brend-item">
+              <div className="main-content-header__brand-item" value="Kauzlav">
+                Kauzlav
+              </div>
+              <div
+                className="main-content-header__brand-item"
+                value="Mus.Autem.Tattoo"
+              >
                 Mus.Autem.Tattoo
               </div>
-              <div className="main-content-header__brend-item">
+              <div
+                className="main-content-header__brand-item"
+                value="Sexual Pressure"
+              >
                 Sexual Pressure
               </div>
-              <div className="main-content-header__brend-item">Yec Yourz</div>
-              <div className="main-content-header__brend-item">teplo</div>
-              <div className="main-content-header__brend-item">Балдеж</div>
-              <div className="main-content-header__brend-item">Дед</div>
-              <div className="main-content-header__brend-item">ИКС - РЕЙ</div>
-              <div className="main-content-header__brend-item">Конч за 500</div>
-              <div className="main-content-header__brend-item">Ля Кринж</div>
-              <div className="main-content-header__brend-item">Шизик</div>
-              <div className="main-content-header__brend-item">Шрам</div>
-              <div className="main-content-header__brend-item">Эмпат</div>
+              <div
+                className="main-content-header__brand-item"
+                value="Yec Yourz"
+              >
+                Yec Yourz
+              </div>
+              <div className="main-content-header__brand-item" value="teplo">
+                teplo
+              </div>
+              <div className="main-content-header__brand-item" value="Балдеж">
+                Балдеж
+              </div>
+              <div className="main-content-header__brand-item" value="Дед">
+                Дед
+              </div>
+              <div
+                className="main-content-header__brand-item"
+                value="ИКС - РЕЙ"
+              >
+                ИКС - РЕЙ
+              </div>
+              <div
+                className="main-content-header__brand-item"
+                value="Конч за 500"
+              >
+                Конч за 500
+              </div>
+              <div className="main-content-header__brand-item" value="Ля Кринж">
+                Ля Кринж
+              </div>
+              <div className="main-content-header__brand-item" value="Шизик">
+                Шизик
+              </div>
+              <div className="main-content-header__brand-item" value="Шрам">
+                Шрам
+              </div>
+              <div className="main-content-header__brand-item" value="Эмпат">
+                Эмпат
+              </div>
             </div>
           </div>
         </div>
